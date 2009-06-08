@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.name    = 'active_form'
-  s.version = '1.0.2'
-  s.date    = '2009-03-16'
+  s.version = '1.0.3'
+  s.date    = '2009-06-08'
   
   s.summary = "Validations for Non Active Record Models"
   
-  s.authors  = ['Christoph Schiessl']
-  s.email    = 'c.schiessl@gmx.net'
-  s.homepage = 'http://github.com/cs/active_form'
+  s.authors  = ['Steve England']
+  s.email    = 'stephen.england@gmail.com'
+  s.homepage = 'http://github.com/beef/active_form'
   
   s.has_rdoc = false
   s.add_dependency 'activerecord', ['>= 2.1.0']
