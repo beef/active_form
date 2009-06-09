@@ -1,12 +1,19 @@
 class ActiveForm
   def initialize(attributes = nil)
-    # Mass Assignment implementation
-    if attributes
-      attributes.each do |key, value| 
-        self[key] = value 
-      end
-    end
+    self.attributes=(attributes)
     yield self if block_given?
+  end
+  
+  def attributes=(attributes)
+    attributes.each do |key, value| 
+      self[key] = value 
+    end if attributes
+  end
+  
+  def attributes
+    attributes = instance_variables
+    attributes.delete("@errors")
+    Hash[*attributes.collect { |attribute| [attribute[1..-1].to_sym, instance_variable_get(attribute)] }.flatten]
   end
   
   def [](key)

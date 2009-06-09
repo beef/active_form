@@ -26,7 +26,9 @@ class BasicTest < Test::Unit::TestCase
     assert_nothing_raised do
       ct = ContactTest.new(params)
       assert_valid ct
+      assert_equal params[:email], ct.attributes[:email]
     end
+    
   end
   
   def test_save_and_create_methods

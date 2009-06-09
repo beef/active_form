@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "active_form"
+    gem.name = "beef-active_form"
     gem.summary = %Q{Validations for Non Active Record Models}
     gem.email = "steve@wearebeef.co.uk"
     gem.homepage = "http://github.com/beef/active_form"
